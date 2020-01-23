@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Video test</title>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="sm:flex p-8">
+
+            <h1 class="sm:hidden font-bold mb-4 text-lg">Video test</h1>
+
+            <div class="mb-8 sm:mb-0 sm:mr-16 bg-gray-600">
+                <video autoplay muted loop playsinline>
+                    <source src="test-video-x265.mp4" type="video/mp4; codecs=hevc">
+                    <source src="test-video-v9.webm" type="video/webm; codecs=vp9">
+                    <source src="test-video-x264.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div>
+                <h1 class="hidden sm:block font-bold mb-4 text-lg">Video test</h1>
+
+                <p class="mb-2">Testing a silent video encoded in h.264, h.265, v9 codecs. The correct file should be automatically selected by the browser, depending on the capabilities of both browser and hardware.</p>
+
+                <p class="mb-4">The codec of the playing video is displayed as text.</p>
+
+                <p class="mb-8">The video should autoplay on mobile and desktops.</p>
+
+                <h2 class="font-bold mb-4">The HTML</h2>
+
+                <pre class="mb-4 overflow-scroll">
+&lt;video autoplay muted loop playsinline&gt;
+    &lt;source src=&quot;test-video-x265.mp4&quot; type=&quot;video/mp4; codecs=hevc&quot;&gt;
+    &lt;source src=&quot;test-video-v9.webm&quot; type=&quot;video/webm; codecs=vp9&quot;&gt;
+    &lt;source src=&quot;test-video-x264.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+                </pre>
+
+                <h2 class="font-bold mb-4">Files and their sizes</h2>
+
+                <pre class="overflow-scroll">
+h.264    <a href="test-video-x264.mp4" class="border-b border-red-500">test-video-x264.mp4</a>   288KB
+h.265    <a href="test-video-x265.mp4" class="border-b border-red-500">test-video-x265.mp4</a>   161KB
+v9       <a href="test-video-v9.webm" class="border-b border-red-500">test-video-v9.webm</a>    KB
+                </pre>
+
+            </div>
+        </div>
+    </body>
+</html>
